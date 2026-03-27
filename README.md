@@ -23,6 +23,7 @@ Connect to your AlloyDB instance (via psql or AlloyDB Studio) and run:
 sql
 CREATE EXTENSION IF NOT EXISTS google_ml_integration CASCADE;
 CREATE EXTENSION IF NOT EXISTS vector;
+
 2. Register the Gemini Model
 Replace <<YOUR_PROJECT_ID>> with your GCP project ID:
 
@@ -35,6 +36,7 @@ CALL google_ml.create_model(
    model_type => 'llm',
    model_auth_type => 'alloydb_service_agent_iam'
 );
+
 3. Grant Vertex AI User Role to AlloyDB Service Account
 Run this in Cloud Shell:
 
@@ -43,6 +45,7 @@ PROJECT_ID=$(gcloud config get-value project)
 gcloud projects add-iam-policy-binding $PROJECT_ID \
   --member="serviceAccount:service-$(gcloud projects describe $PROJECT_ID --format="value(projectNumber)")@gcp-sa-alloydb.iam.gserviceaccount.com" \
   --role="roles/aiplatform.user"
+
 4. Create the builds Table
 sql
 CREATE TABLE builds (
@@ -59,6 +62,7 @@ CREATE TABLE builds (
     cloud_build_id TEXT,
     created_at TIMESTAMP DEFAULT NOW()
 );
+
 5. Load Sample Data
 Run the provided Python script load_data.py (which uses the environment variables in .env):
 
