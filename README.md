@@ -4,10 +4,6 @@
 ## Use Case
 Query CI/CD pipeline build logs using natural language, powered by AlloyDB and Gemini.
 
-## Live Demo
-Visit the deployed application:  
-[https://alloydb-nl-query-688623456290.us-central1.run.app/](https://alloydb-nl-query-688623456290.us-central1.run.app/)
-
 ## Features
 - Custom `builds` table with realistic build data
 - Convert plain English questions to SQL using Gemini 2.5 Flash
