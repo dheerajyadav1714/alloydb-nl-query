@@ -100,6 +100,8 @@ This will insert 200 synthetic build records.
 
 5. Open `http://localhost:8080` in your browser.
 
+fyi, nl_to_sql.py – command‑line version (optional)
+
 ## Deployment to Cloud Run
 
 The app is designed to run on Cloud Run with VPC egress to reach AlloyDB private IP.  
