@@ -76,6 +76,9 @@ After deployment, grant the Cloud Run service account the `alloydb.client` role.
 3. SQL is executed against AlloyDB.
 4. Results are displayed in a table.
 
+<img width="1920" height="869" alt="image" src="https://github.com/user-attachments/assets/ea34ebac-530b-42ab-aa23-1dfaf6625f3f" />
+
+
 ## Security Note
 - The `.env` file contains secrets – never commit it.
 - For production, restrict AlloyDB access to private IP only and use a VPC connector.
