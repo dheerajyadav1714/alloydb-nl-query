@@ -19,7 +19,7 @@ Query CI/CD pipeline build logs using natural language, powered by AlloyDB and G
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/alloydb-nl-query.git
+git clone https://github.com/dheerajyadav1714/alloydb-nl-query.git
 cd alloydb-nl-query
 ```
 
